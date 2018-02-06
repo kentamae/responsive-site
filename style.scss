@@ -1,0 +1,119 @@
+@import "compass";
+
+// font-family
+$baseFontFamily: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #fff;
+$subColor: #eee;
+$keyColor: #9A9A9A;
+$fontColor: #9A9A9A;
+
+/* Base */
+html {
+    font-size: 62.5%;
+}
+
+body {
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family: $baseFontFamily;
+  background-color: $baseColor;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Main Visual */
+.main-visual {
+    width: auto;
+    height: 250px;
+    background: url("img.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+/* desktop --------------- */
+
+@media (min-width: 768px) {
+    .main-visual {
+        height: 500px;
+    }
+}
+
+/* Main */
+main {
+    h1 {
+        margin: 60px auto;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .container {
+        margin: 0 auto;
+        max-width: 1200px;
+        display: flex;
+        flex-flow: column;
+        .box {
+            width: 80%;
+            margin: 0 auto 50px;
+            border: 1px solid #000;
+            color: $baseColor;
+            background-color: $keyColor;
+            h2 {
+                margin: 0 auto;
+                padding: 15px;
+                text-align: center;
+                font-size: 2.4rem;
+                font-weight: bold;
+                color: $keyColor;
+                background-color: $subColor;
+                }
+            p {
+                padding: 10px;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+/* desktop --------------- */
+
+@media (min-width: 769px) {
+    main {
+        h1 {
+            margin: 80px auto;
+        }
+        .container {
+            flex-flow: row;
+            .box {
+                width: 28%;
+            }
+        }
+    }
+}
+
+/* Section */
+section {
+    padding: 30px;
+    font-weight: bold;
+    background-color: $subColor;
+    h3 {
+        margin: 30px auto;
+        color: $keyColor;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .button {
+        margin: 50px auto;
+        padding: 20px;
+        width: 200px;
+        color: $baseColor;
+        text-align: center;
+         font-size: 2rem;
+        background-color: $keyColor;
+        @include border-radius(4px);
+    }
+}
+
